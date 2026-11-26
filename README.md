@@ -7,9 +7,9 @@
 
 ## 项目说明
 
-- 请从上游稳定版 `v0.9.5` 的源码构建。旧的 `0.8.94` 配方提供 Nix 依赖、桌面入口和图标的处理的参考 [上游发布](https://github.com/chen08209/FlClash/releases/tag/v0.9.5) · [历史配方](https://github.com/NixOS/nixpkgs/blob/17938e7d40fd7b6862095ce52796a5a3116ca9bd/pkgs/by-name/fl/flclash/package.nix)
-- 工具链优先使用 Flutter 3.50、Go 1.27 和 Rust 1.99。请把实际使用的提交锁进 `flake.lock`。 [候选 nixpkgs 提交](https://github.com/NixOS/nixpkgs/commit/60527ba01c99b47c515fad87f16f060e54b12d25)
-- 请一起提交 Go 核心和 Rust helper，普通代理模式 [上游 Linux bundle 布局](https://github.com/chen08209/FlClash/blob/v0.9.5/linux/CMakeLists.txt#L110)
+- 请从上游稳定版 `v0.9.5` 的源码构建。仓库中的 `0.8.94` 配方提供 Nix 依赖、桌面入口和图标的处理的参考 [上游发布](https://github.com/chen08209/FlClash/releases/tag/v0.9.5) · [历史配方](https://github.com/NixOS/nixpkgs/blob/17938e7d40fd7b6862095ce52796a5a3116ca9bd/pkgs/by-name/fl/flclash/package.nix)
+- 工具链优先使用 Flutter 3.50、Go 1.27 和 Rust 1.99。请把实际使用的提交锁进 `flake.lock` [候选 nixpkgs 提交](https://github.com/NixOS/nixpkgs/commit/60527ba01c99b47c515fad87f16f060e54b12d25)
+- 请一起提交 Go 核心和 Rust helper [上游 Linux bundle 布局](https://github.com/chen08209/FlClash/blob/v0.9.5/linux/CMakeLists.txt#L110)
 
 
 ### 构建步骤
