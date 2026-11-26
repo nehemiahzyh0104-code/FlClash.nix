@@ -12,7 +12,7 @@
 - 请一起提交 Go 核心和 Rust helper，普通代理模式 [上游 Linux bundle 布局](https://github.com/chen08209/FlClash/blob/v0.9.5/linux/CMakeLists.txt#L110)
 
 
-# 构建步骤
+### 构建步骤
 
 1. **固定源码和依赖** 在 `pkgs/by-name/fl/flclash/package.nix` 里固定 `v0.9.5`、源码哈希和两个子模块 `core/Clash.Meta`、`plugins/prism_ui`。用该 tag 的 `pubspec.lock` 更新同目录的 `pubspec.lock.json`，让 Nix 管理 Pub、Go 和 Cargo 的依赖获取。主构建在 sandbox 内使用已获取的依赖。 [上游子模块](https://github.com/chen08209/FlClash/blob/v0.9.5/.gitmodules) · [Nixpkgs Dart 打包说明](https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/dart.section.md)
 
@@ -29,7 +29,7 @@
 5. **补充本地构建入口和桌面集成** 添加 `flake.nix` 和 `flake.lock`，让 `.#flclash` 调用同一份 `package.nix`。核对桌面启动项的 `Exec`、图标和实际可执行文件名 `FlClash`。 [上游 Linux 可执行文件定义](https://github.com/chen08209/FlClash/blob/v0.9.5/linux/CMakeLists.txt#L7)
 
 
-# 本地构建
+### 本地构建
 
 本地入口补齐后，在启用 Nix sandbox 的环境里，从仓库根目录运行以下命令。`sha256sum` 使用 `manifest.json` 中的 `coreSha256`
 
@@ -40,14 +40,14 @@ cat result/app/flclash/manifest.json
 ./result/bin/FlClash
 ```
 
-# 目标
+### 目标
 
 - 窗口、.desktop、图标和托盘均正常
 - 导入的配置能正常被保存
 - 系统代理和TUN正常
 - 停止代理后网络恢复正常
 
-# 提交和发布测试
+### 提交和发布测试
 
 编译和打包完成后，请交付打包提交，并使用同一提交构建闭包预发行版
 
